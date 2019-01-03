@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<script>
+function Sam()
+{
+	var aa=document.getElementById("button1");
+	if(aa.type=="password")
+	{
+	  	aa.type="text";
+	}else{
+	 	aa.type="password";
+	}
+}
+function checkForm(form)
+{
+  if(form.name.value == "") 
+  {
+    alert("Error: Name cannot be blank!");
+    form.name.focus();
+    return false;
+  }
+  re =/^[a-z]+$/i;
+  if(!re.test(form.name.value)) 
+  {
+    alert("Error:Name must contain only letters!");
+    form.name.focus();
+    return false;
+  }
+  
+  if(form.rno.value=="")
+  {
+	  alert("Error: Registration number cannot be blank!");
+	    form.rno.focus();
+	    return false;
+  }
+  if(form.br.value=="")
+  {
+	  alert("Error: Branch cannot be blank!");
+	    form.br.focus();
+	    return false;
+  }
+  
+  if(form.rno.value!="")
+  {
+	 
+	  if(form.rno.value.length !=10) 
+	  {
+	      alert("Error: Enter a valid 10 digit Registration number!");
+	      form.rno.focus();
+	      return false;
+	  }
+	  
+  }
+  
+  if(form.phno.value=="")
+  {
+	    alert("Error: Phone number cannot be blank!");
+	    form.phno.focus();
+	    return false;
+  }
+  
+  if(form.phno.value!="")
+  {
+	 
+	  if(form.phno.value.length !=10) 
+	  {
+	      alert("Error: Enter a valid 10 digit Mobile number!");
+	      form.phno.focus();
+	      return false;
+	  }
+	  
+  }
+  
+  if(form.eid.value=="")
+  {
+	  alert("Error: Email id cannot be blank!");
+	    form.eid.focus();
+	    return false;
+  }
+  if(form.eid.value=="")
+  {
+	  alert("Error: Password cannot be blank!");
+	    form.eid.focus();
+	    return false;
+  }
+
+  if(form.pass1.value != "" && form.pass1.value == form.pass2.value) 
+  {
+    if(form.pass1.value.length < 6) 
+    {
+      alert("Error: Password must contain at least six characters!");
+      form.pass1.focus();
+      return false;
+    }
+    re = /[0-9]/;
+    if(!re.test(form.pass1.value)) 
+    {
+      alert("Error: Password must contain at least one number (0-9)!");
+      form.pass1.focus();
+      return false;
+    }
+    re = /[a-z]/;
+    if(!re.test(form.pass1.value)) 
+    {
+      alert("Error: Password must contain at least one lowercase letter (a-z)!");
+      form.pass1.focus();
+      return false;
+    }
+    re = /[A-Z]/;
+    if(!re.test(form.pass1.value)) 
+    {
+      alert("Error: Password must contain at least one uppercase letter (A-Z)!");
+      form.pass1.focus();
+      return false;
+    }
+  } 
+  else 
+  {
+    alert("Error: Password field don't match!");
+    form.pass2.focus();
+    return false;
+  }
+
+}
+
+</script>
+
+<head>
+<meta charset="ISO-8859-1">
+<title> VC | STUDENT | REGISTRATION </title>
+<link rel="stylesheet" type="text/css" href="style.css" >
+
+</head>
+<body>
+<div id="MyClockDisplay"></div>
+	<script type="text/javascript">
+		function showTime()
+		{
+			//Date
+			var mydate=new Date();
+			var year=mydate.getYear(); //get the year.
+				if(year <1000)
+					{
+						year+=1900;
+					}
+			var day=mydate.getDay(); //get the day.
+			var month=mydate.getMonth(); //get the month.
+			var daym=mydate.getDate(); //day of the month.
+			var dayarray= new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+			var montharray=new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+			
+			//Time
+			var date = new Date();
+			var h= date.getHours(); //0-23
+			var m= date.getMinutes(); //0-59
+			var s=date.getSeconds(); //0-59
+			var session="AM";
+			if(h==0){
+				h=12;
+			}
+			if(h>12){
+				h=h-12;
+				session="PM";
+			}
+			h=(h<10) ? "0"+ h : h;
+			m=(m<10) ? "0"+ m : m;
+			s=(s<10) ? "0"+ s : s;
+			
+			var date1="" +dayarray[day]+ " " +daym+ " " +montharray[month]+ " " +year+   "  |  "   +h + ":" + m + ":" + s + " " + session;
+			
+			document.getElementById("MyClockDisplay").innerText = date1;
+			document.getElementById("MyClockDisplay").textContent = date1;
+			
+			setTimeout(showTime,1000);
+		}
+		showTime();
+		
+	</script>
+<center>
+<font color="blue" size="3">
+<h1><b> WELCOME TO VIRTUAL CLASSROOM </b></h1>
+<p><marquee behavior="scroll" onmouseover="this.stop()" onmouseout="this.start()">Welcome to Virtual Classroom </marquee></p>
+<div class="vclass-form">
+
+<form action="regis" onsubmit="return checkForm(this);" id="registration" method="post">
+
+<table align="center">
+<h2><b>STUDENT REGISTRATION FORM</b></h2>
+<tr>
+<td align="center">Enter Name</td>
+<td align="center"><input type="text" name="name" id="button" placeholder="Enter your Name" title="Name must not be blank and contain only letters." ></td>
+</tr><br>
+
+<tr>
+<td align="center">Enter Registration No.</td>
+<td align="center"><input type="number" name="rno" id="button" placeholder="Enter your Registration No." title="Registration No. must be of 10 digits" ></td>
+</tr><br>
+
+<tr>
+<td align="center">Enter Branch</td>
+<td align="center"><input type="text" name="br" id="button" placeholder="Enter your Branch" title="Please enter your Branch" ></td>
+</tr><br>
+
+
+<tr>
+<td align="center">Enter Phone number</td>
+<td align="center"><input type="number" name="phno" id="button" placeholder="Enter your phone number" title="Mobile number must be of 10 digits and a valid phone number" ></td>
+</tr><br>
+
+<tr>
+<td  align="center">Enter Email-id</td>
+<td  align="center"><input type="email" name="eid" id="button" placeholder="Enter your email-id" title="Email id must be a valid one"  ></td>
+</tr><br>
+
+<tr>
+<td  align="center">Enter Password</td>
+<td  align="center"><input type="password" name="pass1" id="button1" placeholder="Enter your password" title="Password must contain at least 6 characters, including UPPER/lowercase and numbers."  ></td><td><input type="checkbox" onclick="return Sam();">Show password</td>
+</tr><br>
+
+<tr>
+<td  align="center">Confirm Password</td>
+<td><input type="password" name="pass2" id="button" placeholder="Re-Enter your password" title="Please enter the same Password as above." ></td>
+</tr><br>
+
+</table>
+<br><br>
+<input type="submit" value="SIGNUP" id="butt">
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+<input type="reset" value="RESET" id="butt">
+
+<br><br>
+
+<b>Already Have An Account?</b><br><br>
+
+</style>
+<a href="Student_login.html"><i>Click Here to Login</i></a>
+
+</b>
+</form>
+</div>
+</font>
+</center>
+
+
+</body>
+</html>
