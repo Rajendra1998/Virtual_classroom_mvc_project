@@ -6,6 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title> STUDENT | HOME </title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<style type="text/css" rel="stylesheet">
 	body{
 		background-image:url(1.jpg);
@@ -20,6 +21,9 @@
 		position:absolute;
 		top:94.5%;
 		left:80%;
+	}
+	h2{
+		color:#800000;
 	}
 	.menu nav{
 		position:relative;
@@ -64,6 +68,45 @@
 		margin-left: 200px;
 		top:0px;
 	}
+	.menu1 nav{
+		position:absolute;
+		top:76%;
+		left:38%;
+		
+	}
+	.menu1 nav ul{
+		margin: 0px;
+		padding: 0px;
+		list-style: none;
+	}
+	.menu1 nav ul li {
+		float:left;
+		width: 120px;
+		height: 70px;
+		border:1px  solid white;
+		opacity: .8;
+		line-height: 15px;
+		text-align: center;
+		font-size: 17px;
+		position:relative;
+		border-radius:3px;
+	
+	}
+	.menu1 nav ul li.home{
+		background-color: red;
+	}
+	.menu1 nav ul li.about{
+		background-color: #00ff00;
+	}
+	.menu1 nav ul li.notes{
+		background-color:#ff0080;
+	}
+	.menu1 nav ul li a {
+		text-decoration: none;
+		color:white;
+		display:block;
+	}
+	
 	</style>
 </head>
 <body>
@@ -112,7 +155,7 @@
 		
 	</script>
 	<div class="menu">
-	<%Student currentUser=(Student)session.getAttribute("currentSessionUser");%>
+	
 	<nav>
 	<ul>
 		<li><a href="Student_logged.jsp">Home</a></li>
@@ -127,5 +170,19 @@
 	</ul>
 	</nav>
 	</div>
+	<%Student currentUser=(Student)session.getAttribute("currentSessionUser");%>
+	<h2>Welcome to Virtual Classroom</h2>
+	<br>
+	
+	<div class="menu1">
+		<nav>
+			<ul>
+				<li class="home"><a href="Student_logged.jsp"><br><i class="fa fa-home" aria-hidden="true"></i><br>Home</a></li>
+				<li class="about"><a href="#"><br><i class="fa fa-envelope-open-o" aria-hidden="true"></i></i><br>About</a></li>
+				<li class="notes"><a href="stud_view_fac"><br><i class="fa fa-book" aria-hidden="true"></i><br>Lecture Notes</a></li>
+			</ul>
+		</nav>
+	</div>
+	
 </body>
 </html>

@@ -6,6 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title> STUDENT | HOME </title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<style type="text/css" rel="stylesheet">
 	body{
 		background-image:url(1.jpg);
@@ -20,6 +21,9 @@
 		position:absolute;
 		top:94.5%;
 		left:80%;
+	}
+	h2{
+		color:#800000;
 	}
 	.menu nav{
 		position:relative;
@@ -64,6 +68,45 @@
 		margin-left: 200px;
 		top:0px;
 	}
+	.menu1 nav{
+		position:absolute;
+		top:42%;
+		left:25%;
+		
+	}
+	.menu1 nav ul{
+		margin: 0px;
+		padding: 0px;
+		list-style: none;
+	}
+	.menu1 nav ul li {
+		float:left;
+		width: 232px;
+		height: 145px;
+		border:1px  solid white;
+		opacity: .8;
+		line-height: 30px;
+		text-align: center;
+		font-size: 30px;
+		position:relative;
+		border-radius:3px;
+	
+	}
+	.menu1 nav ul li.about{
+		background-color: #00ff00;
+	}
+	.menu1 nav ul li.profile{
+		background-color: #0000ff;
+	}
+	.menu1 nav ul li.notes{
+		background-color:#ff0080;
+	}
+	.menu1 nav ul li a {
+		text-decoration: none;
+		color:white;
+		display:block;
+	}
+	
 	</style>
 </head>
 <body>
@@ -126,8 +169,22 @@
 	</ul>
 	</nav>
 	</div>
+	
 	<%Student currentUser=(Student)session.getAttribute("currentSessionUser");%>
-	<h3>Welcome <%= currentUser.getName() %></h3>
-	<h3>Welcome to Virtual Classroom</h3>
+	<h2>Welcome <%= currentUser.getName() %></h2>
+	<h2>Welcome to Virtual Classroom</h2>
+	<br>
+	
+	<div class="menu1">
+		<nav>
+			<ul>
+				<li class="about"><a href="#"><br><i class="fa fa-envelope-open-o" aria-hidden="true"></i></i><br>About</a></li>
+				<li class="profile"><a href="stud_pro"><br><i class="fa fa-user" aria-hidden="true"></i><br>View Profile</a></li>
+				<li class="notes"><a href="stud_view_fac"><br><i class="fa fa-book" aria-hidden="true"></i><br>Lecture Notes</a></li>
+			</ul>
+		</nav>
+	</div>
+	
+	
 </body>
 </html>
