@@ -10,7 +10,7 @@ public class StudentLogoutServlet extends HttpServlet
 		PrintWriter out=response.getWriter();
 		HttpSession session=request.getSession();
 		session.invalidate();
-		
+		//System.out.println(session);
 		out.println("<html><body><font color='red' size='5'><center>");
 		out.println("<b>Successfully Logged out !! Thank you !!</b>");
 		out.println("</center></font></body></html>");

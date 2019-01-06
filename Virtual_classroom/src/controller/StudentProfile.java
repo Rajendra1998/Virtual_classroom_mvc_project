@@ -17,9 +17,10 @@ public class StudentProfile extends HttpServlet
 {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
 	{
+		HttpSession session=request.getSession(false);
 		response.setContentType("text/html");
 		PrintWriter out=response.getWriter();
-		HttpSession session=request.getSession(false);
+		
 		try 
 		{
 			if(session!=null)
