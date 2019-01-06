@@ -170,7 +170,12 @@
 	</nav>
 	</div>
 	
-	<%Student currentUser=(Student)session.getAttribute("currentSessionUser");%>
+	<%Student currentUser=(Student)session.getAttribute("currentSessionUser");
+	if ( currentUser == null) 
+    {
+ 	   response.sendRedirect("Student_login1.jsp?error=Please Login First !!");
+    }
+    else{%>
 	<h2>Welcome <%= currentUser.getName() %></h2>
 	<h2>Welcome to Virtual Classroom</h2>
 	<br>
@@ -185,6 +190,6 @@
 		</nav>
 	</div>
 	
-	
+	<%} %>
 </body>
 </html>

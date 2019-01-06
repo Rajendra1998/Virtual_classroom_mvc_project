@@ -22,6 +22,9 @@
 		top:94.5%;
 		left:80%;
 	}
+	h2{
+		color:#800000;
+	}
 	.menu nav{
 		position:relative;
 		float:right;
@@ -66,8 +69,9 @@
 		top:0px;
 	}
 	.menu1 nav{
-		top:50%;
-		left:10%;
+		position:absolute;
+		top:42%;
+		left:25%;
 		
 	}
 	.menu1 nav ul{
@@ -77,19 +81,16 @@
 	}
 	.menu1 nav ul li {
 		float:left;
-		width: 200px;
-		height: 110px;
+		width: 232px;
+		height: 145px;
 		border:1px  solid white;
 		opacity: .8;
-		line-height: 40px;
+		line-height: 30px;
 		text-align: center;
-		font-size: 20px;
+		font-size: 30px;
 		position:relative;
 		border-radius:3px;
 	
-	}
-	.menu1 nav ul li.home{
-		background-color: red;
 	}
 	.menu1 nav ul li.about{
 		background-color: #00ff00;
@@ -98,7 +99,7 @@
 		background-color: #0000ff;
 	}
 	.menu1 nav ul li.notes{
-		background-color:pink;
+		background-color:#ff0080;
 	}
 	.menu1 nav ul li a {
 		text-decoration: none;
@@ -170,20 +171,20 @@
 	</div>
 	
 	<%Student currentUser=(Student)session.getAttribute("currentSessionUser");%>
-	<h3>Welcome <%= currentUser.getName() %></h3>
-	<h3>Welcome to Virtual Classroom</h3>
-	<br><br><br><br><br><br><br><br><br><br><br>
+	<h2>Welcome <%= currentUser.getName() %></h2>
+	<h2>Welcome to Virtual Classroom</h2>
+	<br>
 	
 	<div class="menu1">
 		<nav>
 			<ul>
-				<li class="home"><a href="Student_logged.jsp"><br><i class="fa fa-home" aria-hidden="true"></i><br>Home</a></li>
-				<li class="about"><a href="#"><i class="fa fa-envelope-open-o" aria-hidden="true"></i></i><br>About</a></li>
-				<li class="profile"><a href="stud_pro"><i class="fa fa-user" aria-hidden="true"></i><br>View Profile</a></li>
-				<li class="notes"><a href="stud_view_fac"><i class="fa fa-book" aria-hidden="true"></i><br>Lecture Notes</a></li>
+				<li class="about"><a href="#"><br><i class="fa fa-envelope-open-o" aria-hidden="true"></i></i><br>About</a></li>
+				<li class="profile"><a href="stud_pro"><br><i class="fa fa-user" aria-hidden="true"></i><br>View Profile</a></li>
+				<li class="notes"><a href="stud_view_fac"><br><i class="fa fa-book" aria-hidden="true"></i><br>Lecture Notes</a></li>
 			</ul>
 		</nav>
 	</div>
+	
 	
 </body>
 </html>

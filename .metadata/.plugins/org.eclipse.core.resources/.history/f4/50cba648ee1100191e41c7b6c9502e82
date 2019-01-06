@@ -48,7 +48,7 @@ public class StudentProfile extends HttpServlet
 			else
 			{
 				out.println("<html><body><font color='red' size='5'><center>");
-				out.println("<b>Error message : Please Login first !!</b>");
+				out.println("<b>Please Login first !!</b>");
 				out.println("</center></font></body></html>");
 				RequestDispatcher rd=request.getRequestDispatcher("Student_login.html");
 				rd.include(request,response);
