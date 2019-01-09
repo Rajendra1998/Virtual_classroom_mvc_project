@@ -186,7 +186,7 @@
 		<nav>
 			<ul>
 				<li class="home"><a href="Student_logged.jsp"><br><i class="fa fa-home" aria-hidden="true"></i><br>Home</a></li>
-				<li class="profile"><a href="stud_pro"><br><i class="fa fa-envelope-open-o" aria-hidden="true"></i><br>Profile</a></li>
+				<li class="profile"><a href="stud_pro"><br><i class="fa fa-envelope-open-o" aria-hidden="true"></i><br>View Profile</a></li>
 				<li class="notes"><a href="stud_view_fac"><br><i class="fa fa-book" aria-hidden="true"></i><br>Lecture Notes</a></li>
 			</ul>
 		</nav>

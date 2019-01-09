@@ -71,7 +71,7 @@
 	}
 	.menu1 nav{
 		position:absolute;
-		top:76%;
+		top:82%;
 		left:38%;
 		
 	}
