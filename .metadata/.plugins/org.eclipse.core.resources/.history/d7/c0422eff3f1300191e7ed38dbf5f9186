@@ -1,0 +1,92 @@
+@charset "ISO-8859-1";
+
+body{
+	
+	margin:0;
+	background-image:url(i9.jpg);
+	background-repeat:no-repeat;
+	font-family:sans-serif;
+	background-size:100% 900px;
+}
+#MyClockDisplay{
+	font-color:red;
+	font-style:oblique;
+	font-size:15px;
+	position:absolute;
+	top:0.5%;
+	left:80%;
+}
+h1{
+	text-align: center;
+	width:100% 900px;
+	background-color:lime;
+	opacity:0.8;
+	padding:15px 0px;
+}
+p{
+	width:100% 900px;
+	opacity: 0.9;
+	padding:0px 0px;
+}
+
+.v-form{
+	text-align:center;
+	margin:45px 475px;
+}
+.fa{
+	position: absolute;
+	left:58%;
+	top:63%;
+	font-size: 25px;
+	cursor: pointer;
+	color: #999;
+}
+.fa:active{
+	color: blue;
+}
+#login{
+	
+	width: 560px;
+	background-color:aqua;
+	border-radius:30px;
+	opacity:0.8;
+	padding:19px 0px;
+}
+
+
+#button{
+	width:270px;
+	padding:10px;
+	border-radius:5px;
+	outline:0px;	
+}
+#button1{
+	width:270px;
+	padding:10px;
+	border-radius:5px;
+	outline:0px;
+}
+#button:hover{
+    cursor: text;
+    background-color: beige;
+    color:#0000a0;
+}
+#button1:hover{
+    cursor: text;
+    background-color: beige;
+    color:#0000a0;
+}
+#butt{
+	width:120px;
+	height:50px;
+	border-radius:20px;
+	outline:0px;
+	background-color:black;
+	color:white;
+	font-size:18px;
+}
+.v-form:hover{
+    cursor: auto;
+    color:#0000a0;
+}
+

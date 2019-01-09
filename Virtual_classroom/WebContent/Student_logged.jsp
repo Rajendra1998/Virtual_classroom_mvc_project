@@ -18,9 +18,10 @@
 		font-color:red;
 		font-style:oblique;
 		font-size:17px;
+		z-index:2;
 		position:absolute;
 		top:94.5%;
-		left:80%;
+		left:78%;
 	}
 	h2{
 		color:#800000;
@@ -158,7 +159,7 @@
 	<nav>
 	<ul>
 		<li><a href="Student_logged.jsp">Home</a></li>
-		<li><a href="#">About</a></li>
+		<li><a href="about.jsp">About</a></li>
 		<li><a>Profile</a>
 			<ul>
 				<li><a href="stud_pro">View Profile</a></li>
@@ -183,7 +184,7 @@
 	<div class="menu1">
 		<nav>
 			<ul>
-				<li class="about"><a href="#"><br><i class="fa fa-envelope-open-o" aria-hidden="true"></i></i><br>About</a></li>
+				<li class="about"><a href="about.jsp"><br><i class="fa fa-envelope-open-o" aria-hidden="true"></i><br>About</a></li>
 				<li class="profile"><a href="stud_pro"><br><i class="fa fa-user" aria-hidden="true"></i><br>View Profile</a></li>
 				<li class="notes"><a href="stud_view_fac"><br><i class="fa fa-book" aria-hidden="true"></i><br>Lecture Notes</a></li>
 			</ul>

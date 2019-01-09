@@ -50,20 +50,24 @@ public class FacultyDAO
 		try
 		{
 			cn=ConnectionManager.getConnection();
-			ps=cn.prepareStatement("insert into Faculty values(?,?,?,?,?)");
-			ps.setString(1, name);
-			ps.setString(2, user_id);
-			ps.setString(3, phno);
-			ps.setString(4, eid);
-			ps.setString(5, pass);
-			ResultSet rs=ps.executeQuery();
-			if(rs.next())
+			ps=cn.prepareStatement("select * from Faculty where user_id=? ");
+			ps.setString(1,user_id);
+			ResultSet rs=ps.executeQuery(); 
+			if(rs.next()) //to check duplicate accounts
 			{
-				faculty.setValid(true);
+				faculty.setValid(false);                 // Registration unsuccessfull
 			}
-			else
+			else 
 			{
-				faculty.setValid(false);
+				ps=cn.prepareStatement("insert into Faculty values(?,?,?,?,?)");
+				ps.setString(1, name);
+				ps.setString(2, user_id);
+				ps.setString(3, phno);
+				ps.setString(4, eid);
+				ps.setString(5, pass);
+				int k=ps.executeUpdate();
+				System.out.println(k);
+				faculty.setValid(true); //registration successful
 			}
 			
 		}
