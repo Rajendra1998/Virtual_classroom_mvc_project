@@ -1,2 +1,4 @@
 #Tomcat publish data
-#Thu Jan 10 02:06:50 IST 2019
+#Fri Jan 11 01:23:02 IST 2019
+org.eclipse.jst.jee.server\:/binary\:F\:\\eclipse\ oxy\ workspace\\Virtual_classroom_mvc_project\\Virtual_classroom\\WebContent\\WEB-INF\\lib\\jasper.jar=WEB-INF/lib/jasper.jar
+org.eclipse.jst.jee.server\:/binary\:F\:\\eclipse\ oxy\ workspace\\Virtual_classroom_mvc_project\\Virtual_classroom\\WebContent\\WEB-INF\\lib\\tomcat-websocket.jar=WEB-INF/lib/tomcat-websocket.jar
