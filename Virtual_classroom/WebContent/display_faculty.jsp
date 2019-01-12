@@ -203,7 +203,7 @@
                    } else { %>
                   <tr>
 
-                     <td colspan="3" align="center"><span id="noFiles">No Faculty.....!</span></td>
+                     <td colspan="3" align="center"><span id="noFiles">No Faculty added yet .....!</span></td>
 
                   </tr>
 

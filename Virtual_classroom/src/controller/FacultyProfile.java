@@ -58,10 +58,6 @@ public class FacultyProfile extends HttpServlet
 		}	
 		out.close();
 		
-		
-		
-		
-
 	}
 
 }

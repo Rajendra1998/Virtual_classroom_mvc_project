@@ -29,11 +29,12 @@ public class UpdateFaculty extends HttpServlet {
 		faculty=FacultyDAO.update(faculty);
 		if(faculty.isValid())
 		{
+			RequestDispatcher rd=request.getRequestDispatcher("Admin_logged.jsp");
+			rd.include(request,response);
 			out.println("<html><body><font color='blue' size='5'><center>");
 			out.println("<b>Changes successfully updated</b>");
 			out.println("</center></font></body></html>");
-			RequestDispatcher rd=request.getRequestDispatcher("display_faculty.jsp");
-			rd.include(request,response);
+			
 		}
 		else
 		{
