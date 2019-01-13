@@ -9,11 +9,12 @@ public class FacultyLogoutServlet extends HttpServlet
 		response.setContentType("text/html");
 		PrintWriter out=response.getWriter();
 		HttpSession session=request.getSession();
-		session.invalidate();
+		
 		//System.out.println(session);
 		out.println("<html><body><font color='red' size='5'><center>");
 		out.println("<b>Successfully Logged out !! Thank you !!</b>");
 		out.println("</center></font></body></html>");
 		request.getRequestDispatcher("Faculty_login.html").include(request,response);
+		session.invalidate();
 	}
 }

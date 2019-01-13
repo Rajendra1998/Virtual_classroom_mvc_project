@@ -24,7 +24,7 @@ import model.UploadDetail;
 
 public class FileUpload extends HttpServlet 
 {
-	private final String UPLOAD_DIRECTORY = "D:/uploads";
+	private final String UPLOAD_DIRECTORY = "F:/uploads";
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
 	{
 		response.setContentType("text/html");
@@ -34,6 +34,7 @@ public class FileUpload extends HttpServlet
 		String faculty_name=currentFaculty.getName();
 		try 
 		{
+			
 			String upload_path=UPLOAD_DIRECTORY+File.separator +faculty_name;
 			//System.out.print("Upload path="+upload_path);
 			File fileUploadDir=new File(upload_path);
@@ -69,20 +70,23 @@ public class FileUpload extends HttpServlet
 					    fileList.add(details);
 				}
 			}
-		
+			
 			request.setAttribute("uploadedFiles", fileList);
-			out.println("<html><body><font color='red' size='5'><center>");
+			RequestDispatcher rd=request.getRequestDispatcher("file_upload.jsp");
+			rd.include(request,response);
+			out.println("<html><body><font color='blue' size='5'><center>");
 			out.println("<b>File uploaded successfully</b>");
 			out.println("</center></font></body></html>");
-			RequestDispatcher rd=request.getRequestDispatcher("Faculty_logged.jsp");
-			rd.include(request,response);
+			
 		
+			
 		}
 					  
 		catch(Exception ee)
 		{
 			ee.printStackTrace();
 		}
+		out.close();
 		
 	}
 }

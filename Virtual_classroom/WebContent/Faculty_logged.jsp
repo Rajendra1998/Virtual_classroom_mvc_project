@@ -3,24 +3,6 @@
     import="model.Faculty" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<script>
-function checkFile() {
-    var fileElement = document.getElementById("file");
-    var fileExtension = "";
-    if (fileElement.value.lastIndexOf(".") > 0) {
-        fileExtension = fileElement.value.substring(fileElement.value.lastIndexOf(".") + 1, fileElement.value.length);
-    }
-    if (fileExtension.toLowerCase()=="pptx" || fileExtension.toLowerCase()=="ppt" || fileExtension.toLowerCase()=="pdf" || fileExtension.toLowerCase()=="doc" || fileExtension.toLowerCase()=="docx" || fileExtension.toLowerCase()=="txt") 
-    {
-        return true;
-    }
-    else
-    {
-        alert("You must select a pptx/ppt/pdf/doc/docx/txt file for upload");
-        return false;
-    }
-}
-</script>
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -28,7 +10,7 @@ function checkFile() {
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<style type="text/css" rel="stylesheet">
 	body{
-		background-image:url(bg1.jpeg);
+		background-image:url(1.jpg);
 		background-repeat:no-repeat;
 	 	font-family:sans-serif;
 		background-size:cover;
@@ -215,11 +197,7 @@ function checkFile() {
 	
 	<%} %>
 	
-	<form action="upload" method="post" encType="multipart/form-data" onsubmit="return checkFile();">
-		<input type="file" name="file" id="file" multiple/>
-		<input type="submit" value="Upload File">
-	</form><br><br>
-	<a href="disp_files">Display uploaded files</a>
+	
 
 </body>
 </html>

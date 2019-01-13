@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<style type="text/css" rel="stylesheet">
 	body{
-		background-image:url(bg1.jpeg);
+		background-image:url(1.jpg);
 		background-repeat:no-repeat;
 	 	font-family:sans-serif;
 		background-size:cover;
